@@ -28,6 +28,9 @@ public class loginPage
 	@FindBy(xpath ="//div[@class='message-error']//div//span")
 	WebElement error_messgae;
 	
+	@FindBy(xpath ="//input[@id='RememberMe']")
+	WebElement rememberMe_checkbox;
+	
 	
 	
 	
@@ -65,6 +68,23 @@ public class loginPage
   {
 	String msg =   error_messgae.getText();
 	return msg;
+  }
+  
+  public void loginWithRemenderMe(String email, String password)
+  {
+      login_page_link.click();
+	  
+	  enterUsername(email);
+	  
+	  enterPassword(password);
+	  
+	  
+	  if(rememberMe_checkbox.isSelected()==false)
+	  {
+		  rememberMe_checkbox.click();
+	  }
+	  
+	  login_button.submit();
   }
   
   
