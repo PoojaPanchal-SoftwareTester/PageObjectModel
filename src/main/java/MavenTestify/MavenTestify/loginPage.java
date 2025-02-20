@@ -25,6 +25,11 @@ public class loginPage
 	@FindBy(xpath ="//input[@value=\"Log in\"]")
 	WebElement login_button;
 	
+	@FindBy(xpath ="//div[@class='message-error']//div//span")
+	WebElement error_messgae;
+	
+	
+	
 	
 	
   public loginPage(WebDriver driver)
@@ -36,11 +41,31 @@ public class loginPage
   {
 	  login_page_link.click();
 	  
-	  WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
-	  wait.until(ExpectedConditions.visibilityOf(email_input)).sendKeys(email);
+	  enterUsername(email);
 	  
-	  password_input.sendKeys(password);
+	  enterPassword(password);
 	  
 	  login_button.submit();  
   }
+  
+  public void enterUsername(String username)
+  {
+	  email_input.clear();
+	  WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
+	  wait.until(ExpectedConditions.visibilityOf(email_input)).sendKeys(username);
+  }
+  
+  public void enterPassword(String Password)
+  {
+	  password_input.clear();
+	  password_input.sendKeys(Password);
+  }
+  
+  public String getErrorMessgae()
+  {
+	String msg =   error_messgae.getText();
+	return msg;
+  }
+  
+  
 }
