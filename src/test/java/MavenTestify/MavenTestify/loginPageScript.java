@@ -25,7 +25,7 @@ public class loginPageScript extends BaseClass
 		loginObj = new loginPage(driver);
 	}
 	
-	@Test(priority=3)
+	@Test(priority=4)
 	public void testValidLogin()
 	{
 		loginObj.login(locator.getProperty("email"), locator.getProperty("password"));
