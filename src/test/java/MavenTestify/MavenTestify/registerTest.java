@@ -2,13 +2,16 @@ package MavenTestify.MavenTestify;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.beust.jcommander.internal.Console;
 
 import Base.BaseClass;
-
+import Listeners.CustomTestListener;
+@Listeners(CustomTestListener.class)
 public class registerTest extends BaseClass
 {
 	
@@ -57,6 +60,10 @@ public class registerTest extends BaseClass
 		         
 		         regObj.registerForm(gender,first_name,last_name,email,password,confirm_password); //call registerForm method
 		         
+		        String currentUrl=  driver.getCurrentUrl();
+		        String expectedUrl = "https://demowebshop.tricentis.com/registerresult/1";
+		        //System.out.println("registered title"+currentUrl);
+		         Assert.assertEquals(currentUrl, expectedUrl, "User already exist or due to some reason registration failed");
 			 }
 			
 		} catch (IOException e) {

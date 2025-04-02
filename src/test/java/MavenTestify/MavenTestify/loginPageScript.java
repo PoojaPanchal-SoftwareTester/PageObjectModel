@@ -6,21 +6,26 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Base.BaseClass;
+import Listeners.CustomTestListener;
 
+@Listeners(CustomTestListener.class)
 public class loginPageScript extends BaseClass
 {
 	loginPage loginObj;
 	public loginPageScript()
 	{
 		super();
+		
 	}
 	
 	@BeforeClass
 	public void setUp()
 	{
+		//super.setUp(driver);
 		openUrl("https://demowebshop.tricentis.com");
 		loginObj = new loginPage(driver);
 	}

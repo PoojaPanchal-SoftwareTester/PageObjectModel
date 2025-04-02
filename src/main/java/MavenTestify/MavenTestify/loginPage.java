@@ -66,7 +66,7 @@ public class loginPage
   
   public String getErrorMessgae()
   {
-	String msg =   error_messgae.getText();
+	String msg =  error_messgae.getText();
 	return msg;
   }
   

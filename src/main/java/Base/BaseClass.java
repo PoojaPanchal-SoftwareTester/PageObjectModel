@@ -6,14 +6,19 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestContext;
+import org.testng.annotations.BeforeClass;
 
 public class BaseClass 
 {
@@ -71,6 +76,12 @@ public class BaseClass
 		}
 	}
 	
+	  @BeforeClass
+	    public void setUp(ITestContext context) {
+	       // driver.manage().window().maximize();
+	        context.setAttribute("WebDriver", driver); // Store WebDriver in TestNG context
+	    }
+	
 	// Method to open the URL
 	public void openUrl(String url)
 	{
@@ -118,6 +129,12 @@ public class BaseClass
 	  
 	  return data; 
 	  }
+	  
+	  //screenshot
+	  public void screenShots(String methodName)
+	  {
+		  
+	  }
 
 	//Quit the WebDriver when done
 	public void quitDriver()
@@ -128,5 +145,7 @@ public class BaseClass
 			driver = null;
 		}
 	}
+	
+	
 
 }
