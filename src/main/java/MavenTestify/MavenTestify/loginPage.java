@@ -38,10 +38,12 @@ public class loginPage
   public loginPage(WebDriver driver)
   {
 	  PageFactory.initElements(driver, this);
+	  //System.out.println("driver...."+driver);
   }
   
   public void login(String email, String password)
   {
+	 
 	  login_page_link.click();
 	  
 	  enterUsername(email);
@@ -53,6 +55,7 @@ public class loginPage
   
   public void enterUsername(String username)
   {
+	 
 	  email_input.clear();
 	  WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(10));
 	  wait.until(ExpectedConditions.visibilityOf(email_input)).sendKeys(username);

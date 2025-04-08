@@ -2,33 +2,33 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-02T11:35:46 IST" name="Default suite" finished-at="2025-04-02T11:35:51 IST" duration-ms="4857">
+  <suite started-at="2025-04-08T09:23:36 IST" name="Default suite" finished-at="2025-04-08T09:23:41 IST" duration-ms="5469">
     <groups>
     </groups>
-    <test started-at="2025-04-02T11:35:46 IST" name="Default test" finished-at="2025-04-02T11:35:51 IST" duration-ms="4857">
+    <test started-at="2025-04-08T09:23:36 IST" name="Default test" finished-at="2025-04-08T09:23:41 IST" duration-ms="5469">
       <class name="MavenTestify.MavenTestify.registerTest">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:MavenTestify.MavenTestify.registerTest@64ba3208]" started-at="2025-04-02T11:35:46 IST" name="setUp" finished-at="2025-04-02T11:35:46 IST" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:MavenTestify.MavenTestify.registerTest@158a3b2e]" started-at="2025-04-08T09:23:36 IST" name="setUp" finished-at="2025-04-08T09:23:36 IST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@48840594]]>
+                <![CDATA[org.testng.TestRunner@49c675f0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:MavenTestify.MavenTestify.registerTest@64ba3208]" started-at="2025-04-02T11:35:46 IST" name="setUp" finished-at="2025-04-02T11:35:48 IST" duration-ms="2225" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:MavenTestify.MavenTestify.registerTest@158a3b2e]" started-at="2025-04-08T09:23:36 IST" name="setUp" finished-at="2025-04-08T09:23:38 IST" duration-ms="2453" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="registerFormTest()[pri:0, instance:MavenTestify.MavenTestify.registerTest@64ba3208]" started-at="2025-04-02T11:35:48 IST" name="registerFormTest" finished-at="2025-04-02T11:35:51 IST" duration-ms="2391" status="FAIL">
+        <test-method signature="registerFormTest()[pri:0, instance:MavenTestify.MavenTestify.registerTest@158a3b2e]" started-at="2025-04-08T09:23:38 IST" name="registerFormTest" finished-at="2025-04-08T09:23:41 IST" duration-ms="2732" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Registration failed expected [https://demowebshop.tricentis.com/registerresult/1] but found [https://demowebshop.tricentis.com/register]]]>
+              <![CDATA[User already exist or due to some reason registration failed expected [https://demowebshop.tricentis.com/registerresult/1] but found [https://demowebshop.tricentis.com/register]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Registration failed expected [https://demowebshop.tricentis.com/registerresult/1] but found [https://demowebshop.tricentis.com/register]
+              <![CDATA[java.lang.AssertionError: User already exist or due to some reason registration failed expected [https://demowebshop.tricentis.com/registerresult/1] but found [https://demowebshop.tricentis.com/register]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertEqualsImpl(Assert.java:140)

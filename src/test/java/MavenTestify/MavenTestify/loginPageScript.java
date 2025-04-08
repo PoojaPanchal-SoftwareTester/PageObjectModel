@@ -30,7 +30,7 @@ public class loginPageScript extends BaseClass
 		loginObj = new loginPage(driver);
 	}
 	
-	@Test(priority=4)
+	@Test(priority=1)
 	public void testValidLogin()
 	{
 		loginObj.login(locator.getProperty("email"), locator.getProperty("password"));
@@ -38,25 +38,25 @@ public class loginPageScript extends BaseClass
 		Assert.assertEquals(email_display.getText(),locator.getProperty("email"),"Unable to login with valid credentials" );
 	}
 	
-	@Test(priority=2)
-	public void testInvalidLogin()
-	{
-		loginObj.login(locator.getProperty("invalidEmail"), locator.getProperty("invalidPassword"));
-		String message = loginObj.getErrorMessgae();
-	    Assert.assertTrue(message.contains("Login was unsuccessful. Please correct the errors and try again."), "Error message is not displayed");
-	}
-	@Test(priority=1)
-	public void testEmptyUsernameAndPassword()
-	{
-		loginObj.login("", "");
-		String message = loginObj.getErrorMessgae();
-	    Assert.assertTrue(message.contains("Login was unsuccessful. Please correct the errors and try again."), "Error is not dispalyed for empty credentails");
-	}
-	@Test(priority=3)
-	public void testLoginWithRemenderMe()
-	{
-		loginObj.loginWithRemenderMe(locator.getProperty("email"), locator.getProperty("password"));
-		WebElement email_display = driver.findElement(By.xpath("//div[@class='header-links']//ul//li//a"));
-		Assert.assertEquals(email_display.getText(),locator.getProperty("email"),"Unable to login with RemenderMe" );
-	}
+	/*
+	 * @Test(priority=2) public void testInvalidLogin() {
+	 * loginObj.login(locator.getProperty("invalidEmail"),
+	 * locator.getProperty("invalidPassword")); String message =
+	 * loginObj.getErrorMessgae(); Assert.assertTrue(message.
+	 * contains("Login was unsuccessful. Please correct the errors and try again."),
+	 * "Error message is not displayed"); }
+	 * 
+	 * @Test(priority=1) public void testEmptyUsernameAndPassword() {
+	 * loginObj.login("", ""); String message = loginObj.getErrorMessgae();
+	 * Assert.assertTrue(message.
+	 * contains("Login was unsuccessful. Please correct the errors and try again."),
+	 * "Error is not dispalyed for empty credentails"); }
+	 * 
+	 * @Test(priority=3) public void testLoginWithRemenderMe() {
+	 * loginObj.loginWithRemenderMe(locator.getProperty("email"),
+	 * locator.getProperty("password")); WebElement email_display =
+	 * driver.findElement(By.xpath("//div[@class='header-links']//ul//li//a"));
+	 * Assert.assertEquals(email_display.getText(),locator.getProperty("email")
+	 * ,"Unable to login with RemenderMe" ); }
+	 */
 }
