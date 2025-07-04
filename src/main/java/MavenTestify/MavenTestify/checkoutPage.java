@@ -123,18 +123,8 @@ public class checkoutPage
 				wait.until(ExpectedConditions.visibilityOf(confirm_order_button)).click();
 				
 				wait.until(ExpectedConditions.visibilityOf(order_confirm_button)).click();
-				
-				
-			    
-			}	
-				
-			
-		
-		
-			
-		
-			
-			
+ 
+			}		
 			//address_confirm_button.click();  
 	}
 	catch (Exception e) {
