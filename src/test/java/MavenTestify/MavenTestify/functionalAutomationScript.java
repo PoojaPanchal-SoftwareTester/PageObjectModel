@@ -4,10 +4,12 @@ import java.util.Properties;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import Base.BaseClass;
-
+import Listeners.CustomTestListener;
+@Listeners(CustomTestListener.class)
 public class functionalAutomationScript extends BaseClass
 {
 	loginPage loginObj;

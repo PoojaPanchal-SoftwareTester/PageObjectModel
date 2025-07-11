@@ -10,6 +10,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -86,6 +87,7 @@ public class BaseClass
 	public void openUrl(String url)
 	{
 		 driver.get(url);
+		
 	}
 	
 	// Excel Utility Method to get data from Excel

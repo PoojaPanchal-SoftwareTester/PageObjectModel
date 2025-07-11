@@ -3,12 +3,13 @@
 <suite name="Failed suite [Test-Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="ToolsQA(failed)">
     <classes>
-      <class name="MavenTestify.MavenTestify.loginPageScript">
+      <class name="MavenTestify.MavenTestify.functionalAutomationScript">
         <methods>
+          <include name="runTest"/>
           <include name="setUp"/>
-          <include name="testValidLogin"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- MavenTestify.MavenTestify.loginPageScript -->
+      </class> <!-- MavenTestify.MavenTestify.functionalAutomationScript -->
     </classes>
   </test> <!-- ToolsQA(failed) -->
 </suite> <!-- Failed suite [Test-Suite] -->

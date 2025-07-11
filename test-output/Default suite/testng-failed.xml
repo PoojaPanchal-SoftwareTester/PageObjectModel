@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="MavenTestify.MavenTestify.registerTest">
+      <class name="MavenTestify.MavenTestify.functionalAutomationScript">
         <methods>
-          <include name="registerFormTest"/>
+          <include name="runTest"/>
           <include name="setUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- MavenTestify.MavenTestify.registerTest -->
+      </class> <!-- MavenTestify.MavenTestify.functionalAutomationScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
